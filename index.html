@@ -1309,8 +1309,22 @@ function submitForm() {
   if (!message) { document.getElementById('messageError').classList.add('show'); valid = false; }
 
   if (valid) {
-    document.getElementById('contactFormArea').style.display = 'none';
-    document.getElementById('formSuccess').classList.add('show');
+    fetch('https://formspree.io/f/xgopboag', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, phone, message })
+    })
+    .then(response => {
+      if (response.ok) {
+        document.getElementById('contactFormArea').style.display = 'none';
+        document.getElementById('formSuccess').classList.add('show');
+      } else {
+        alert('Something went wrong. Please try again or call us directly.');
+      }
+    })
+    .catch(() => {
+      alert('Something went wrong. Please try again or call us directly.');
+    });
   }
 }
 
