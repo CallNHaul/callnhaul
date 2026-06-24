@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C5XM7YKSGS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-C5XM7YKSGS');
+</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Call N Haul — Fast, reliable junk removal. One Call Clears All. Same-day service, upfront pricing, eco-friendly disposal."/>
+<title>Call N Haul — One Call Clears All</title>
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet"/>
+<style>
+/* ── TOKENS ─────────────────────────── */
+:root {
+  --navy:      #0F2255;
+  --navy-dk:   #081540;
+  --navy-mid:  #1A3070;
+  --blue:      #3A9FE0;
+  --blue-lt:   #5BBCF5;
+  --blue-dk:   #2880C0;
+  --sky:       #E6F4FC;
+  --white:     #ffffff;
+  --smoke:     #F4F8FC;
+  --ash:       #DDE8F0;
+  --mist:      #C4D8E8;
+  --mid:       #5A6E80;
+  --ink:       #0D1E3A;
+  --text:      #1A2E44;
+}
+
+/* ── RESET ──────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background: var(--white);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+/* ── SPA PAGES ──────────────────────── */
+.page { display: none; padding-top: 64px; }
+.page.active { display: block; }
+
+/* ── NAV ────────────────────────────── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 clamp(1.25rem, 4vw, 4rem);
+  height: 64px;
+  background: var(--navy);
+  border-bottom: 3px solid var(--blue);
+}
+
+.nav-brand {
+  display: flex; align-items: center; gap: 10px;
+  cursor: pointer;
+}
+
+.nav-logo-img { height: 44px; width: auto; flex-shrink: 0; }
+
+.brand-text {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.15rem; font-weight: 700;
+  color: var(--white); letter-spacing: 1px;
+  text-transform: uppercase; line-height: 1.1;
+}
+.brand-text span { color: var(--blue-lt); }
+
+.nav-links {
+  display: flex; align-items: center; gap: clamp(1rem, 2.5vw, 2.5rem);
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.8rem; font-weight: 500;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: rgba(255,255,255,0.65); text-decoration: none;
+  cursor: pointer; transition: color 0.2s;
+}
+.nav-links a:hover,
+.nav-links a.active { color: var(--white); }
+
+.nav-links .nav-cta {
+  background: var(--blue); color: var(--white) !important;
+  padding: 9px 20px; transition: background 0.2s;
+}
+.nav-links .nav-cta:hover { background: var(--blue-lt); }
+
+.hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.hamburger span {
+  display: block; width: 24px; height: 2px;
+  background: var(--white); transition: all 0.3s;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-nav {
+  display: none;
+  position: fixed; top: 64px; left: 0; right: 0;
+  background: var(--navy-mid);
+  border-bottom: 2px solid var(--blue);
+  z-index: 99; padding: 1rem 0;
+}
+.mobile-nav.open { display: block; }
+.mobile-nav a {
+  display: block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem; font-weight: 500; letter-spacing: 1.5px;
+  text-transform: uppercase; cursor: pointer;
+  color: rgba(255,255,255,0.8);
+  padding: 0.85rem clamp(1.25rem, 4vw, 4rem);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  transition: color 0.2s;
+}
+.mobile-nav a:hover { color: var(--blue-lt); }
+.mobile-nav a.mobile-cta { color: var(--blue-lt); border-bottom: none; }
+
+/* ── HERO ───────────────────────────── */
+.hero {
+  min-height: calc(100svh - 64px);
+  background: var(--navy);
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column;
+  justify-content: center;
+  padding: clamp(3rem, 8vw, 7rem) clamp(1.25rem, 4vw, 4rem);
+}
+
+.hero::before {
+  content: '';
+  position: absolute; top: 0; right: 0;
+  width: 38%; height: 100%;
+  background: linear-gradient(160deg, #0a2040 0%, #05101f 100%);
+  clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+}
+.hero::after {
+  content: '';
+  position: absolute; left: 0; top: 0;
+  width: 4px; height: 100%;
+  background: var(--blue);
+}
+
+.hero-content { position: relative; z-index: 1; max-width: 640px; }
+
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.75rem; font-weight: 500; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--blue-lt);
+  margin-bottom: 1.5rem;
+}
+.hero-tag::before {
+  content: ''; display: block;
+  width: 20px; height: 2px; background: var(--blue-lt);
+}
+
+.hero-badge-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #4ade80; display: inline-block;
+  animation: blink 2s ease infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+.hero h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 700; line-height: 1; color: var(--white);
+  text-transform: uppercase; letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+.hero h1 em { color: var(--blue-lt); font-style: normal; display: block; }
+
+.hero-desc {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  line-height: 1.75; color: rgba(255,255,255,0.55);
+  font-weight: 300; max-width: 480px; margin-bottom: 2.5rem;
+}
+
+.hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+.btn {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem; font-weight: 500;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 14px 30px; cursor: pointer; border: none;
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: all 0.2s;
+}
+.btn-blue { background: var(--blue); color: var(--white); }
+.btn-blue:hover { background: var(--blue-lt); }
+.btn-outline {
+  background: transparent; color: var(--white);
+  border: 1.5px solid rgba(255,255,255,0.35);
+}
+.btn-outline:hover { border-color: var(--white); }
+.btn-navy { background: var(--navy); color: var(--white); }
+.btn-navy:hover { background: var(--navy-mid); }
+.btn-full { width: 100%; justify-content: center; }
+
+/* Stats row */
+.hero-stats {
+  position: absolute; bottom: 0; left: 0; right: 0; z-index: 1;
+  display: flex; border-top: 1px solid rgba(255,255,255,0.08);
+}
+.stat-box {
+  flex: 1; padding: 1.75rem clamp(1.25rem, 3vw, 2.5rem);
+  border-right: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+}
+.stat-box:last-child { border-right: none; }
+.stat-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700; color: var(--white); line-height: 1;
+}
+.stat-num em { color: var(--blue-lt); font-style: normal; }
+.stat-lbl {
+  font-size: 0.72rem; font-weight: 400; letter-spacing: 1.5px;
+  text-transform: uppercase; color: rgba(255,255,255,0.4);
+  margin-top: 4px;
+}
+
+/* ── STRIP ──────────────────────────── */
+.strip {
+  background: var(--blue);
+  display: flex; flex-wrap: wrap;
+}
+.strip-item {
+  flex: 1; min-width: 150px;
+  padding: 1.1rem clamp(1rem, 2vw, 2rem);
+  border-right: 1px solid rgba(0,0,0,0.12);
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.72rem; font-weight: 500; letter-spacing: 2px;
+  text-transform: uppercase; color: rgba(255,255,255,0.9);
+  display: flex; align-items: center; gap: 8px;
+}
+.strip-item::before { content: '●'; font-size: 0.4rem; color: rgba(255,255,255,0.6); }
+
+/* ── SECTION SHARED ─────────────────── */
+.section {
+  padding: clamp(3rem, 7vw, 6rem) clamp(1.25rem, 4vw, 4rem);
+  max-width: 1280px; margin: 0 auto;
+}
+
+.full-section {
+  padding: clamp(3rem, 7vw, 6rem) clamp(1.25rem, 4vw, 4rem);
+}
+
+.section-eye {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.72rem; font-weight: 500; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--blue);
+  margin-bottom: 1rem;
+}
+.section-eye::before {
+  content: ''; display: block;
+  width: 16px; height: 2px; background: var(--blue);
+}
+
+.section-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+  font-weight: 700; text-transform: uppercase; line-height: 1.05;
+  color: var(--ink); margin-bottom: 1rem;
+}
+
+.section-body {
+  font-size: 1rem; line-height: 1.8;
+  color: var(--mid); font-weight: 300; max-width: 500px;
+}
+
+/* ── HOME: SERVICES PREVIEW ─────────── */
+.svc-preview { background: var(--smoke); border-top: 1px solid var(--ash); border-bottom: 1px solid var(--ash); }
+.svc-preview-inner {
+  max-width: 1280px; margin: 0 auto;
+  display: grid; grid-template-columns: 300px 1fr;
+}
+.svc-preview-left {
+  padding: clamp(2rem, 5vw, 5rem) clamp(1.25rem, 3vw, 3rem);
+  border-right: 1px solid var(--ash);
+  display: flex; flex-direction: column; justify-content: center;
+}
+.svc-preview-left .btn { margin-top: 2rem; align-self: flex-start; }
+.svc-preview-right { display: flex; flex-direction: column; }
+.svc-row {
+  display: grid; grid-template-columns: 60px 1fr;
+  gap: 1.25rem; align-items: start;
+  padding: clamp(1.5rem, 3vw, 2.25rem) clamp(1.25rem, 3vw, 2.5rem);
+  border-bottom: 1px solid var(--ash);
+  transition: background 0.2s;
+}
+.svc-row:last-child { border-bottom: none; }
+.svc-row:hover { background: var(--white); }
+.svc-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem; font-weight: 700; color: var(--ash);
+  line-height: 1;
+}
+.svc-row:hover .svc-num { color: var(--blue); }
+.svc-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem; font-weight: 600; color: var(--ink);
+  letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 0.35rem;
+}
+.svc-desc { font-size: 0.9rem; color: var(--mid); line-height: 1.65; }
+
+/* ── HOME: WHY US ───────────────────── */
+.why-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 0; margin-top: 3rem;
+  border: 1px solid var(--ash);
+}
+.why-card {
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border-right: 1px solid var(--ash);
+  position: relative;
+}
+.why-card:last-child { border-right: none; }
+.why-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0;
+  width: 3px; height: 0;
+  background: var(--blue);
+  transition: height 0.3s;
+}
+.why-card:hover::before { height: 100%; }
+.why-icon { width: 32px; height: 32px; color: var(--blue); margin-bottom: 1rem; }
+.why-card h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.5px; color: var(--ink); margin-bottom: 0.5rem;
+}
+.why-card p { font-size: 0.875rem; color: var(--mid); line-height: 1.7; }
+
+/* ── HOW IT WORKS ───────────────────── */
+.how-wrap { background: var(--smoke); border-top: 1px solid var(--ash); border-bottom: 1px solid var(--ash); }
+.how-inner {
+  max-width: 1280px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+}
+.how-left {
+  padding: clamp(2.5rem, 5vw, 5rem) clamp(1.25rem, 4vw, 4rem);
+  border-right: 1px solid var(--ash);
+}
+.process-list { margin-top: 2rem; }
+.process-item {
+  display: flex; gap: 1.25rem; align-items: start;
+  padding: 1.4rem 0; border-bottom: 1px solid var(--ash);
+}
+.process-item:last-child { border-bottom: none; }
+.p-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem; font-weight: 700; color: var(--blue);
+  min-width: 28px; line-height: 1.4;
+}
+.process-item h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.95rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.5px; color: var(--ink); margin-bottom: 0.3rem;
+}
+.process-item p { font-size: 0.875rem; color: var(--mid); line-height: 1.6; }
+.how-right {
+  background: var(--navy);
+  display: flex; align-items: center; justify-content: center;
+  padding: clamp(2.5rem, 5vw, 5rem);
+  text-align: center;
+}
+.big-stat-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-weight: 700; color: var(--white); line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.big-stat-num em { color: var(--blue-lt); font-style: normal; }
+.big-stat-lbl {
+  font-size: 0.875rem; color: rgba(255,255,255,0.45);
+  line-height: 1.7; max-width: 220px; margin: 0 auto;
+}
+
+/* ── CTA STRIP ──────────────────────── */
+.cta-strip {
+  background: var(--navy);
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1.25rem, 4vw, 4rem);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 2rem; flex-wrap: wrap;
+}
+.cta-strip h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  color: var(--white); line-height: 1.1;
+}
+.cta-strip h2 em { color: var(--blue-lt); font-style: normal; }
+.cta-strip p { font-size: 0.9rem; color: rgba(255,255,255,0.45); margin-top: 0.6rem; line-height: 1.7; }
+
+/* ── PAGE HEADER ────────────────────── */
+.page-header {
+  background: var(--navy);
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1.25rem, 4vw, 4rem);
+  border-bottom: 3px solid var(--blue);
+}
+.page-header .section-title { color: var(--white); }
+.page-header .section-body { color: rgba(255,255,255,0.5); }
+.page-header .section-eye { color: var(--blue-lt); }
+.page-header .section-eye::before { background: var(--blue-lt); }
+
+/* ── SERVICES PAGE ──────────────────── */
+
+/* Pricing cards */
+.pricing-wrap {
+  max-width: 1280px; margin: 0 auto;
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.25rem, 4vw, 4rem);
+}
+
+.pricing-two-col {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0; border: 1px solid var(--ash);
+}
+
+.pricing-card {
+  padding: clamp(2rem, 4vw, 3.5rem);
+  border-right: 1px solid var(--ash);
+  position: relative;
+}
+.pricing-card:last-child { border-right: none; }
+.pricing-card.featured { background: var(--navy); }
+
+.pricing-tag {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.7rem; font-weight: 600; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--blue);
+  display: block; margin-bottom: 1rem;
+}
+.pricing-card.featured .pricing-tag { color: var(--blue-lt); }
+
+.pricing-card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.75rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.5px; color: var(--ink); margin-bottom: 0.5rem;
+}
+.pricing-card.featured h3 { color: var(--white); }
+
+.pricing-main-price {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700; color: var(--blue);
+  line-height: 1; margin-bottom: 0.25rem;
+}
+.pricing-card.featured .pricing-main-price { color: var(--blue-lt); }
+
+.pricing-sub-price {
+  font-size: 0.9rem; color: var(--mid); margin-bottom: 0.35rem;
+}
+.pricing-card.featured .pricing-sub-price { color: rgba(255,255,255,0.5); }
+
+.pricing-unit {
+  font-size: 0.8rem; font-weight: 600; color: var(--mid);
+  text-transform: uppercase; letter-spacing: 1px;
+  margin-bottom: 2rem; padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--ash);
+}
+.pricing-card.featured .pricing-unit {
+  color: rgba(255,255,255,0.4);
+  border-color: rgba(255,255,255,0.1);
+}
+
+.pricing-features { margin-bottom: 2rem; }
+.pricing-features li {
+  font-size: 0.875rem; color: var(--mid);
+  padding: 0.6rem 0; border-bottom: 1px solid var(--ash);
+  display: flex; align-items: center; gap: 0.65rem;
+}
+.pricing-card.featured .pricing-features li {
+  color: rgba(255,255,255,0.65);
+  border-color: rgba(255,255,255,0.08);
+}
+.pricing-features li::before {
+  content: ''; width: 5px; height: 5px;
+  border-radius: 50%; background: var(--blue); flex-shrink: 0;
+}
+.pricing-card.featured .pricing-features li::before { background: var(--blue-lt); }
+
+/* Detail services grid */
+.svc-grid {
+  max-width: 1280px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border-left: 1px solid var(--ash);
+  border-top: 1px solid var(--ash);
+}
+.svc-card {
+  padding: clamp(1.75rem, 3vw, 2.75rem);
+  border-right: 1px solid var(--ash);
+  border-bottom: 1px solid var(--ash);
+  transition: background 0.2s;
+}
+.svc-card:hover { background: var(--smoke); }
+.svc-card.primary { background: var(--navy); }
+.svc-card.primary:hover { background: var(--navy-mid); }
+.svc-tag {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.7rem; font-weight: 500; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--blue);
+  display: block; margin-bottom: 1rem;
+}
+.svc-card.primary .svc-tag { color: var(--blue-lt); }
+.svc-card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.5px; color: var(--ink); margin-bottom: 0.75rem;
+}
+.svc-card.primary h3 { color: var(--white); }
+.svc-card > p { font-size: 0.9rem; line-height: 1.75; color: var(--mid); margin-bottom: 1.75rem; }
+.svc-card.primary > p { color: rgba(255,255,255,0.55); }
+.svc-list li {
+  font-size: 0.875rem; color: var(--mid);
+  padding: 0.55rem 0; border-bottom: 1px solid var(--ash);
+  display: flex; align-items: center; gap: 0.65rem;
+}
+.svc-card.primary .svc-list li {
+  color: rgba(255,255,255,0.6);
+  border-color: rgba(255,255,255,0.08);
+}
+.svc-list li::before {
+  content: ''; width: 5px; height: 5px;
+  border-radius: 50%; background: var(--blue); flex-shrink: 0;
+}
+.svc-card.primary .svc-list li::before { background: var(--blue-lt); }
+
+/* ── ABOUT PAGE ─────────────────────── */
+
+/* Owner bio section */
+.owner-section {
+  background: var(--smoke); border-bottom: 1px solid var(--ash);
+}
+.owner-inner {
+  max-width: 1280px; margin: 0 auto;
+  display: grid; grid-template-columns: 280px 1fr;
+  align-items: center;
+}
+.owner-photo-wrap {
+  padding: clamp(2rem, 4vw, 3.5rem) clamp(1.25rem, 3vw, 2.5rem);
+  border-right: 1px solid var(--ash);
+}
+.owner-photo-box {
+  background: var(--ash); aspect-ratio: 4/5;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.owner-photo-box img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+.owner-photo-placeholder {
+  font-family: 'Oswald', sans-serif;
+  font-size: 4.5rem; font-weight: 700; color: var(--mist);
+  user-select: none;
+}
+.owner-photo-box::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 4px; background: var(--blue);
+}
+.owner-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.5px; color: var(--ink); margin-top: 1rem;
+}
+.owner-role {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--blue); margin-top: 3px;
+}
+.owner-bio-wrap {
+  padding: clamp(2rem, 4vw, 3.5rem) clamp(1.25rem, 4vw, 4rem);
+}
+.owner-bio-wrap h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 700; text-transform: uppercase;
+  color: var(--ink); margin-bottom: 1rem;
+}
+.owner-bio-wrap p {
+  font-size: 0.975rem; line-height: 1.85; color: var(--mid);
+  font-weight: 300; margin-bottom: 1rem;
+}
+.owner-bio-wrap p:last-child { margin-bottom: 0; }
+
+.about-layout {
+  max-width: 1280px; margin: 0 auto;
+  display: grid; grid-template-columns: 320px 1fr;
+}
+.about-sidebar {
+  background: var(--smoke);
+  border-right: 1px solid var(--ash);
+  padding: clamp(2rem, 4vw, 3.5rem) clamp(1.25rem, 3vw, 2.5rem);
+}
+.meta-table { padding-top: 1.5rem; display: grid; gap: 1rem; }
+.meta-row label {
+  display: block; font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--mid); margin-bottom: 3px;
+}
+.meta-row span { font-size: 0.9rem; color: var(--ink); font-weight: 600; }
+.about-main {
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 4vw, 4rem);
+}
+.about-main h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700; text-transform: uppercase;
+  color: var(--ink); margin-bottom: 1.5rem;
+}
+.about-main p {
+  font-size: 0.975rem; line-height: 1.85; color: var(--mid);
+  font-weight: 300; margin-bottom: 1.4rem;
+}
+.pull-quote {
+  border-left: 3px solid var(--blue);
+  padding: 1.25rem 1.75rem; margin: 2rem 0;
+  background: var(--smoke);
+}
+.pull-quote p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.15rem; font-weight: 400; color: var(--ink);
+  line-height: 1.55; margin: 0; font-style: italic;
+}
+.values-row {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 1px; background: var(--ash);
+  margin-top: 2rem; border: 1px solid var(--ash);
+}
+.val-cell { background: var(--white); padding: 1.5rem; }
+.val-cell h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--blue); margin-bottom: 0.45rem;
+}
+.val-cell p { font-size: 0.875rem; color: var(--mid); line-height: 1.65; }
+
+/* Testimonials */
+.testimonials-wrap { background: var(--smoke); border-top: 1px solid var(--ash); border-bottom: 1px solid var(--ash); }
+.testimonials-inner {
+  max-width: 1280px; margin: 0 auto;
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.25rem, 4vw, 4rem);
+}
+.testimonials-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 0; border: 1px solid var(--ash); margin-top: 2.5rem;
+}
+.testimonial-card {
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  border-right: 1px solid var(--ash);
+  transition: background 0.2s;
+}
+.testimonial-card:last-child { border-right: none; }
+.testimonial-card:hover { background: var(--white); }
+.stars { display: flex; gap: 2px; margin-bottom: 1rem; color: #FBBF24; font-size: 1rem; }
+.testimonial-text {
+  font-size: 0.9rem; color: var(--mid); line-height: 1.75;
+  font-style: italic; margin-bottom: 1rem;
+}
+.testimonial-name { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.875rem; color: var(--ink); text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* ── CONTACT PAGE ───────────────────── */
+.contact-layout {
+  max-width: 1280px; margin: 0 auto;
+  display: grid; grid-template-columns: 320px 1fr;
+}
+.contact-sidebar {
+  background: var(--smoke); border-right: 1px solid var(--ash);
+  padding: clamp(2rem, 4vw, 3.5rem) clamp(1.25rem, 3vw, 2.5rem);
+}
+.contact-sidebar h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.5px; color: var(--ink); margin-bottom: 2rem;
+}
+.c-item {
+  display: flex; gap: 1rem; align-items: flex-start;
+  padding-bottom: 1.5rem; margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--ash);
+}
+.c-item:last-of-type { border-bottom: none; }
+.c-icon {
+  width: 38px; height: 38px; background: var(--blue);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; flex-shrink: 0; color: var(--white);
+}
+.c-item label {
+  display: block; font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--mid); margin-bottom: 3px;
+}
+.c-item span { font-size: 0.9rem; color: var(--ink); font-weight: 600; line-height: 1.5; }
+.c-item a { color: var(--blue); font-weight: 600; }
+.c-item a:hover { text-decoration: underline; }
+.contact-note {
+  margin-top: 1.5rem; padding: 1.25rem 1.5rem;
+  background: var(--blue); color: var(--white);
+}
+.contact-note .label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 2px;
+  text-transform: uppercase; opacity: 0.85; margin-bottom: 0.4rem;
+}
+.contact-note p { font-size: 0.875rem; line-height: 1.65; opacity: 0.9; }
+
+.contact-form-wrap {
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 4vw, 4rem);
+}
+.form-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.5px; color: var(--ink); margin-bottom: 0.4rem;
+}
+.form-sub { font-size: 0.9rem; color: var(--mid); margin-bottom: 2rem; line-height: 1.6; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.fg { margin-bottom: 1rem; }
+.fg label {
+  display: block; font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--ink); margin-bottom: 6px;
+}
+.fg input, .fg select, .fg textarea {
+  width: 100%; background: var(--white);
+  border: 1.5px solid var(--ash);
+  padding: 12px 14px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.9rem; color: var(--ink);
+  outline: none; border-radius: 0;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+}
+.fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--blue); }
+.fg textarea { resize: vertical; min-height: 120px; }
+.form-error {
+  color: #EF4444; font-size: 0.78rem; margin-top: 4px; display: none;
+  font-family: 'Oswald', sans-serif; letter-spacing: 0.5px;
+}
+.form-error.show { display: block; }
+.submit-btn {
+  background: var(--blue); color: var(--white);
+  padding: 15px 36px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem; font-weight: 600; letter-spacing: 1.5px;
+  text-transform: uppercase; border: none; cursor: pointer;
+  transition: background 0.2s;
+}
+.submit-btn:hover { background: var(--blue-lt); }
+.form-success {
+  display: none; text-align: center;
+  padding: clamp(2rem, 6vw, 4rem) 2rem;
+}
+.form-success.show { display: block; }
+.success-icon {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--blue); color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; margin: 0 auto 1.5rem;
+}
+.form-success h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8rem; font-weight: 700; text-transform: uppercase;
+  color: var(--ink); margin-bottom: 0.75rem;
+}
+.form-success p { font-size: 0.9rem; color: var(--mid); line-height: 1.7; }
+
+/* ── FOOTER ─────────────────────────── */
+footer {
+  background: var(--navy-dk);
+  border-top: 3px solid var(--blue);
+  padding: clamp(1.75rem, 4vw, 2.75rem) clamp(1.25rem, 4vw, 4rem);
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 1.5rem; align-items: center;
+}
+.footer-brand {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 1px; color: var(--white);
+}
+.footer-brand span { color: var(--blue-lt); }
+.footer-tag { font-size: 0.78rem; color: rgba(255,255,255,0.3); margin-top: 3px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 1.75rem; list-style: none; }
+.footer-links a {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.72rem; font-weight: 500; letter-spacing: 1.5px;
+  text-transform: uppercase; color: rgba(255,255,255,0.4);
+  cursor: pointer; transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--blue-lt); }
+.footer-copy {
+  grid-column: 1/-1; border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 1.25rem; margin-top: 0.25rem;
+  font-size: 0.75rem; color: rgba(255,255,255,0.2); text-align: center;
+}
+
+/* Social icons */
+.social-row { display: flex; gap: 14px; margin-top: 1.25rem; }
+.social-row a {
+  color: rgba(255,255,255,0.4); transition: color 0.2s; cursor: pointer;
+}
+.social-row a:hover { color: var(--blue-lt); }
+
+/* ── RESPONSIVE ─────────────────────── */
+@media (max-width: 900px) {
+  .hamburger { display: flex; }
+  .nav-links { display: none; }
+  .hero-stats { position: static; flex-wrap: wrap; }
+  .stat-box { min-width: 50%; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .strip-item { min-width: 50%; }
+  .svc-preview-inner { grid-template-columns: 1fr; }
+  .svc-preview-left { border-right: none; border-bottom: 1px solid var(--ash); }
+  .why-grid { grid-template-columns: 1fr 1fr; }
+  .why-card { border-bottom: 1px solid var(--ash); }
+  .why-card:nth-child(2) { border-right: none; }
+  .svc-grid { grid-template-columns: 1fr 1fr; }
+  .how-inner { grid-template-columns: 1fr; }
+  .how-left { border-right: none; border-bottom: 1px solid var(--ash); }
+  .about-layout, .contact-layout { grid-template-columns: 1fr; }
+  .about-sidebar, .contact-sidebar { border-right: none; border-bottom: 1px solid var(--ash); }
+  .owner-inner { grid-template-columns: 1fr; }
+  .owner-photo-wrap { border-right: none; border-bottom: 1px solid var(--ash); }
+  .owner-photo-box { aspect-ratio: 3/2; max-width: 280px; }
+  .pricing-two-col { grid-template-columns: 1fr; }
+  .pricing-card { border-right: none; border-bottom: 1px solid var(--ash); }
+  .pricing-card:last-child { border-bottom: none; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .testimonial-card { border-right: none; border-bottom: 1px solid var(--ash); }
+  .testimonial-card:last-child { border-bottom: none; }
+  footer { grid-template-columns: 1fr; }
+  .footer-links { gap: 1.25rem; }
+  .cta-strip { flex-direction: column; }
+}
+
+@media (max-width: 640px) {
+  .svc-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .why-card { border-right: none !important; }
+  .values-row { grid-template-columns: 1fr; }
+  .stat-box { min-width: 100%; }
+  .strip-item { min-width: 100%; }
+  .hero-actions { flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* ── FADE IN ─────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.page.active .hero-content > * {
+  animation: fadeUp 0.45s ease both;
+}
+.page.active .hero-content > *:nth-child(1) { animation-delay: 0.05s; }
+.page.active .hero-content > *:nth-child(2) { animation-delay: 0.1s; }
+.page.active .hero-content > *:nth-child(3) { animation-delay: 0.15s; }
+.page.active .hero-content > *:nth-child(4) { animation-delay: 0.2s; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand" onclick="showPage('home')">
+    <img src="New_Logo.png" alt="Call N Haul Logo" class="nav-logo-img"/>
+    <div class="brand-text">Call N <span>Haul</span></div>
+  </div>
+  <ul class="nav-links">
+    <li><a onclick="showPage('home')" id="nav-home" class="active">Home</a></li>
+    <li><a onclick="showPage('services')" id="nav-services">Services</a></li>
+    <li><a onclick="showPage('about')" id="nav-about">About</a></li>
+    <li><a onclick="showPage('contact')" id="nav-contact" class="nav-cta">Free Quote</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobile-nav">
+  <a onclick="showPage('home')">Home</a>
+  <a onclick="showPage('services')">Services</a>
+  <a onclick="showPage('about')">About</a>
+  <a onclick="showPage('contact')" class="mobile-cta">Free Quote →</a>
+</div>
+
+
+<!-- ═══════════════ HOME ═══════════════ -->
+<div class="page active" id="page-home">
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="hero-badge-dot"></span>
+        Same-Day Service Available
+      </div>
+      <h1>One Call<em>Clears All.</em></h1>
+      <p class="hero-desc">Fast, reliable junk removal serving the Ogden area. We haul it all — so you don't have to.</p>
+      <div class="hero-actions">
+        <button class="btn btn-blue" onclick="showPage('contact')">Get a Free Quote</button>
+        <a class="btn btn-outline" href="tel:8018669710">Call (801) 866-9710</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-box">
+        <div class="stat-num">1,000<em>+</em></div>
+        <div class="stat-lbl">Jobs Completed</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">4.9<em>★</em></div>
+        <div class="stat-lbl">Average Rating</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">Same<em>Day</em></div>
+        <div class="stat-lbl">Service Available</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="strip-item">Junk Removal</div>
+    <div class="strip-item">Trailer Drop-Off</div>
+    <div class="strip-item">Same-Day Service</div>
+    <div class="strip-item">Free Estimates</div>
+  </div>
+
+  <!-- Services Preview -->
+  <div class="svc-preview">
+    <div class="svc-preview-inner">
+      <div class="svc-preview-left">
+        <div class="section-eye">What We Do</div>
+        <h2 class="section-title">Services Built Around You</h2>
+        <p class="section-body">From full-service hauling to drop-off trailer rentals — Call N Haul handles every job with care.</p>
+        <button class="btn btn-blue" onclick="showPage('services')">View Services &amp; Pricing</button>
+      </div>
+      <div class="svc-preview-right">
+        <div class="svc-row">
+          <div class="svc-num">01</div>
+          <div>
+            <div class="svc-name">In-Person Junk Removal</div>
+            <div class="svc-desc">Our crew shows up, loads everything, and hauls it away. You don't lift a finger.</div>
+          </div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-num">02</div>
+          <div>
+            <div class="svc-name">Trailer Drop-Off</div>
+            <div class="svc-desc">We drop a trailer at your property and pick it up when you're ready. Fill it on your own schedule.</div>
+          </div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-num">03</div>
+          <div>
+            <div class="svc-name">Eco-Friendly Disposal</div>
+            <div class="svc-desc">We sort every load for recycling and donation before anything hits the landfill.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why Us -->
+  <div class="section">
+    <div class="section-eye">Why Call N Haul</div>
+    <h2 class="section-title">What Sets Us Apart</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <h4>Same-Day Service</h4>
+        <p>Need it gone today? Most jobs are completed within hours of your call.</p>
+      </div>
+      <div class="why-card">
+        <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        <h4>Upfront Pricing</h4>
+        <p>No hidden fees, no surprises. You'll know the price before we lift a single item.</p>
+      </div>
+      <div class="why-card">
+        <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66L17 8z"/></svg>
+        <h4>Eco-Friendly</h4>
+        <p>We recycle and donate whenever possible. Your junk gets a second life.</p>
+      </div>
+      <div class="why-card">
+        <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        <h4>Professional Team</h4>
+        <p>Our uniformed, insured crew treats your property with respect every time.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- How It Works -->
+  <div class="how-wrap">
+    <div class="how-inner">
+      <div class="how-left">
+        <div class="section-eye">The Process</div>
+        <h2 class="section-title">How It Works</h2>
+        <div class="process-list">
+          <div class="process-item">
+            <div class="p-num">01</div>
+            <div>
+              <h4>Call or Request a Quote</h4>
+              <p>Reach out by phone or fill out our quick online form. We'll get back to you fast with a free estimate.</p>
+            </div>
+          </div>
+          <div class="process-item">
+            <div class="p-num">02</div>
+            <div>
+              <h4>We Arrive &amp; Remove</h4>
+              <p>Our crew shows up on time, loads everything, and sweeps up after themselves.</p>
+            </div>
+          </div>
+          <div class="process-item">
+            <div class="p-num">03</div>
+            <div>
+              <h4>Enjoy a Clean Space</h4>
+              <p>Sit back and enjoy the results. Clutter-free home or workspace — it's that simple.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="how-right">
+        <div>
+          <div class="big-stat-num">4.9<em>★</em></div>
+          <p class="big-stat-lbl">Average customer rating across hundreds of completed jobs in the Ogden area.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-strip">
+    <div>
+      <h2>Ready to Clear Your <em>Space?</em></h2>
+      <p>Get a free, no-obligation quote today. Same-day service available.</p>
+    </div>
+    <button class="btn btn-blue" onclick="showPage('contact')">Get a Free Quote →</button>
+  </div>
+
+  <footer>
+    <div>
+      <div class="footer-brand">Call N <span>Haul</span></div>
+      <div class="footer-tag">One Call Clears All.</div>
+    </div>
+    <ul class="footer-links">
+      <li><a onclick="showPage('home')">Home</a></li>
+      <li><a onclick="showPage('services')">Services</a></li>
+      <li><a onclick="showPage('about')">About</a></li>
+      <li><a onclick="showPage('contact')">Contact</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 Call N Haul. All rights reserved.</div>
+  </footer>
+</div>
+
+
+<!-- ═══════════════ SERVICES ═══════════════ -->
+<div class="page" id="page-services">
+
+  <div class="page-header">
+    <div class="section-eye">Pricing &amp; Services</div>
+    <h1 class="section-title">Simple, Transparent Pricing</h1>
+    <p class="section-body">Two ways to haul — choose the service that works best for you. No hidden fees, ever.</p>
+  </div>
+
+  <!-- Pricing -->
+  <div class="pricing-wrap">
+    <div class="section-eye" style="margin-bottom:0.5rem">Our Two Services</div>
+    <h2 class="section-title" style="margin-bottom:2rem">Choose Your Option</h2>
+    <div class="pricing-two-col">
+
+      <!-- In-Person Removal -->
+      <div class="pricing-card">
+        <span class="pricing-tag">★ Full Service</span>
+        <h3>In-Person Junk Removal</h3>
+        <div class="pricing-main-price">$350</div>
+        <div class="pricing-sub-price">First trailer load (8.5 cu. yds.) — minimum charge</div>
+        <div class="pricing-sub-price" style="font-weight:600; color: var(--blue);">+ $200 per additional trailer</div>
+        <div class="pricing-unit">We haul it — you do nothing</div>
+        <ul class="pricing-features">
+          <li>Our crew loads everything for you</li>
+          <li>8.5 cubic yard trailer per load</li>
+          <li>$200 flat rate for each extra trailer</li>
+          <li>Same-day service available</li>
+          <li>Full cleanup after removal</li>
+          <li>Eco-friendly recycling &amp; donation</li>
+        </ul>
+        <button class="btn btn-blue btn-full" onclick="showPage('contact')">Book This Service</button>
+      </div>
+
+      <!-- Trailer Drop-Off -->
+      <div class="pricing-card featured">
+        <span class="pricing-tag">Flexible Option</span>
+        <h3>Trailer Drop-Off</h3>
+        <div class="pricing-main-price">$150</div>
+        <div class="pricing-sub-price">First day — we drop and pick up</div>
+        <div class="pricing-sub-price" style="font-weight:600; color: var(--blue-lt);">+ $250 per additional day</div>
+        <div class="pricing-unit">Fill it on your schedule</div>
+        <ul class="pricing-features">
+          <li>We drop the trailer at your location</li>
+          <li>Fill it at your own pace</li>
+          <li>$250 per day after the first day</li>
+          <li>We pick up and haul when you're done</li>
+          <li>Great for cleanouts &amp; renovations</li>
+          <li>8.5 cubic yard trailer capacity</li>
+        </ul>
+        <button class="btn btn-blue btn-full" onclick="showPage('contact')">Book This Service</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- What We Haul -->
+  <div class="svc-grid">
+    <div class="svc-card primary">
+      <span class="svc-tag">★ Most Requested</span>
+      <h3>Furniture Removal</h3>
+      <p>Old sofas, beds, dressers, desks, and more. We carefully remove them from any room in your home or office.</p>
+      <ul class="svc-list">
+        <li>Sofas &amp; sectionals</li>
+        <li>Beds &amp; mattresses</li>
+        <li>Dressers &amp; tables</li>
+        <li>Office furniture</li>
+        <li>Outdoor furniture</li>
+      </ul>
+    </div>
+    <div class="svc-card">
+      <span class="svc-tag">Service</span>
+      <h3>Appliance Disposal</h3>
+      <p>Refrigerators, washers, dryers, stoves, and other appliances disposed of safely and responsibly.</p>
+      <ul class="svc-list">
+        <li>Refrigerators &amp; freezers</li>
+        <li>Washers &amp; dryers</li>
+        <li>Stoves &amp; ovens</li>
+        <li>Dishwashers</li>
+        <li>Microwaves &amp; small appliances</li>
+      </ul>
+    </div>
+    <div class="svc-card">
+      <span class="svc-tag">Service</span>
+      <h3>Garage Cleanouts</h3>
+      <p>Transform your cluttered garage back into usable space. We haul away years of accumulated junk.</p>
+      <ul class="svc-list">
+        <li>Full garage cleanouts</li>
+        <li>Attic &amp; basement cleanouts</li>
+        <li>Estate cleanouts</li>
+        <li>Storage unit clearing</li>
+        <li>Hoarder cleanups</li>
+      </ul>
+    </div>
+    <div class="svc-card">
+      <span class="svc-tag">Service</span>
+      <h3>Yard Waste Removal</h3>
+      <p>Branches, leaves, stumps, soil, and landscaping debris. We leave your yard looking clean.</p>
+      <ul class="svc-list">
+        <li>Tree branches &amp; limbs</li>
+        <li>Leaves &amp; lawn waste</li>
+        <li>Stumps &amp; roots</li>
+        <li>Dirt &amp; gravel</li>
+        <li>Landscaping debris</li>
+      </ul>
+    </div>
+    <div class="svc-card">
+      <span class="svc-tag">Service</span>
+      <h3>Construction Debris</h3>
+      <p>Drywall, lumber, concrete, tile, and renovation waste. We keep your job site clean.</p>
+      <ul class="svc-list">
+        <li>Drywall &amp; lumber</li>
+        <li>Concrete &amp; tile</li>
+        <li>Roofing materials</li>
+        <li>Renovation scraps</li>
+        <li>Metal &amp; scrap materials</li>
+      </ul>
+    </div>
+    <div class="svc-card">
+      <span class="svc-tag">Service</span>
+      <h3>General Junk</h3>
+      <p>Boxes, clothing, electronics, toys — if you want it gone, we'll take care of it.</p>
+      <ul class="svc-list">
+        <li>Electronics &amp; e-waste</li>
+        <li>Clothing &amp; textiles</li>
+        <li>Boxes &amp; packing materials</li>
+        <li>Toys &amp; sporting goods</li>
+        <li>Mixed household items</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cta-strip">
+    <div>
+      <h2>Not Sure What You <em>Need?</em></h2>
+      <p>Call us for a free estimate. We'll help you pick the right service.</p>
+    </div>
+    <a class="btn btn-blue" href="tel:8018669710">Call (801) 866-9710</a>
+  </div>
+
+  <footer>
+    <div>
+      <div class="footer-brand">Call N <span>Haul</span></div>
+      <div class="footer-tag">One Call Clears All.</div>
+    </div>
+    <ul class="footer-links">
+      <li><a onclick="showPage('home')">Home</a></li>
+      <li><a onclick="showPage('services')">Services</a></li>
+      <li><a onclick="showPage('about')">About</a></li>
+      <li><a onclick="showPage('contact')">Contact</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 Call N Haul. All rights reserved.</div>
+  </footer>
+</div>
+
+
+<!-- ═══════════════ ABOUT ═══════════════ -->
+<div class="page" id="page-about">
+
+  <div class="page-header">
+    <div class="section-eye">About Us</div>
+    <h1 class="section-title">Built to Make Junk Removal Simple</h1>
+    <p class="section-body">We started Call N Haul with one mission — make clearing your space fast, easy, and stress-free.</p>
+  </div>
+
+  <!-- Owner Bio -->
+  <div class="owner-section">
+    <div class="owner-inner">
+      <div class="owner-photo-wrap">
+        <div class="owner-photo-box">
+          <!-- Replace "owner-photo.jpg" with your actual photo filename -->
+          <img src="owner-photo.jpg" alt="Matthew Wood, Owner of Call N Haul" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" style="display:block;"/>
+          <div class="owner-photo-placeholder" style="display:none;">MW</div>
+        </div>
+        <div class="owner-name">Matthew Wood</div>
+        <div class="owner-role">Founder &amp; Owner</div>
+      </div>
+      <div class="owner-bio-wrap">
+        <div class="section-eye">Meet the Owner</div>
+        <h2>Hi, I'm Matthew.</h2>
+        <p>I started Call N Haul because I saw a real need for honest, dependable junk removal in the Ogden area. Too many people deal with no-shows, surprise charges, and sloppy crews. I wanted to build something different — a company where every customer gets the same reliability and respect, whether it's a single couch or a full estate cleanout.</p>
+        <p>I'm a Mechanical Engineering student at BYU-Idaho and a Utah native. When I'm not running jobs, I'm studying, building my business skills, and reinvesting in making Call N Haul better for you. Every job I take on, I treat like it's for a family member — because honestly, that's how I'd want someone to treat mine.</p>
+        <p>When you call Call N Haul, you're not calling a faceless company. You're calling me. I stand behind every job we do.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Our Story -->
+  <div class="about-layout">
+    <div class="about-sidebar">
+      <div class="section-eye">Quick Facts</div>
+      <div class="meta-table" style="border-top: 1px solid var(--ash); margin-top:1rem;">
+        <div class="meta-row">
+          <label>Founded</label>
+          <span>2024, Ogden Utah</span>
+        </div>
+        <div class="meta-row">
+          <label>Service Area</label>
+          <span>Ogden Area &amp; Suburbs (30 mi.)</span>
+        </div>
+        <div class="meta-row">
+          <label>Specialty</label>
+          <span>Junk Removal &amp; Trailer Drop-Off</span>
+        </div>
+        <div class="meta-row">
+          <label>Rating</label>
+          <span>4.9 ★ Average</span>
+        </div>
+        <div class="meta-row">
+          <label>Hours</label>
+          <span>Mon–Sat 7AM–7PM, Sun by appt.</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-main">
+      <h2>Our Story</h2>
+      <p>Call N Haul was founded on a simple idea — junk removal shouldn't be complicated. Too many companies overcharge, show up late, or leave a mess behind. We set out to change that.</p>
+      <div class="pull-quote">
+        <p>"I started this company because I believe every customer deserves honesty, reliability, and a fair price. One call really should clear it all."</p>
+      </div>
+      <p>We've completed over 1,000 jobs and earned a 4.9-star rating doing it. Our uniformed crew treats every job — big or small — with the same level of care and respect. When we're done, we don't just haul — we sweep up and leave your space cleaner than we found it.</p>
+      <p>We're also committed to sustainability. Every load gets sorted for recycling and donation before anything goes to the landfill. It's better for the planet and better for our community.</p>
+      <div class="values-row">
+        <div class="val-cell">
+          <h4>Honesty</h4>
+          <p>Upfront pricing. No hidden fees. No games.</p>
+        </div>
+        <div class="val-cell">
+          <h4>Speed</h4>
+          <p>Same-day service. We respect your time.</p>
+        </div>
+        <div class="val-cell">
+          <h4>Clean Results</h4>
+          <p>We leave your space spotless every time.</p>
+        </div>
+        <div class="val-cell">
+          <h4>Community</h4>
+          <p>Locally owned, serving our own neighbors.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <div class="testimonials-wrap">
+    <div class="testimonials-inner">
+      <div class="section-eye">Testimonials</div>
+      <h2 class="section-title">What Our Customers Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"They showed up on time, cleared my entire garage in under two hours, and left the place spotless. Absolutely recommend!"</p>
+          <p class="testimonial-name">— Sarah M.</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Best price I found by far. The team was professional, quick, and super friendly. Will use again for sure."</p>
+          <p class="testimonial-name">— James K.</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"I was dreading cleaning out my mom's house. Call N Haul made it so much easier. Compassionate and efficient."</p>
+          <p class="testimonial-name">— Lisa R.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-strip">
+    <div>
+      <h2>Join 1,000<em>+</em> Happy Customers</h2>
+      <p>Experience the Call N Haul difference today.</p>
+    </div>
+    <button class="btn btn-blue" onclick="showPage('contact')">Get Your Free Quote →</button>
+  </div>
+
+  <footer>
+    <div>
+      <div class="footer-brand">Call N <span>Haul</span></div>
+      <div class="footer-tag">One Call Clears All.</div>
+    </div>
+    <ul class="footer-links">
+      <li><a onclick="showPage('home')">Home</a></li>
+      <li><a onclick="showPage('services')">Services</a></li>
+      <li><a onclick="showPage('about')">About</a></li>
+      <li><a onclick="showPage('contact')">Contact</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 Call N Haul. All rights reserved.</div>
+  </footer>
+</div>
+
+
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<div class="page" id="page-contact">
+
+  <div class="page-header">
+    <div class="section-eye">Get Started</div>
+    <h1 class="section-title">Let's Get Your Space Cleared</h1>
+    <p class="section-body">Fill out the form below or give us a call. We'll get back to you fast with a free quote.</p>
+  </div>
+
+  <div class="contact-layout">
+    <div class="contact-sidebar">
+      <h3>Get in Touch</h3>
+      <div class="c-item">
+        <div class="c-icon">📞</div>
+        <div>
+          <label>Phone</label>
+          <span><a href="tel:8018669710">(801) 866-9710</a></span>
+        </div>
+      </div>
+      <div class="c-item">
+        <div class="c-icon">✉</div>
+        <div>
+          <label>Email</label>
+          <span><a href="mailto:callnhaul26@gmail.com">callnhaul26@gmail.com</a></span>
+        </div>
+      </div>
+      <div class="c-item">
+        <div class="c-icon">📍</div>
+        <div>
+          <label>Service Area</label>
+          <span>Ogden Area &amp; Surrounding Suburbs<br/>Up to 30 miles out</span>
+        </div>
+      </div>
+      <div class="c-item">
+        <div class="c-icon">🕐</div>
+        <div>
+          <label>Hours</label>
+          <span>Mon–Sat: 7:00 AM – 7:00 PM<br/>Sunday: By appointment</span>
+        </div>
+      </div>
+      <div class="c-item">
+        <div class="c-icon">📱</div>
+        <div>
+          <label>Follow Us</label>
+          <span>
+            <a href="https://www.instagram.com/call.n.haul/" target="_blank">Instagram</a><br/>
+            <a href="https://www.tiktok.com/@call_n_haul" target="_blank">TikTok</a><br/>
+            <a href="https://www.youtube.com/@Call_N_Haul" target="_blank">YouTube</a>
+          </span>
+        </div>
+      </div>
+      <div class="contact-note">
+        <div class="label">Free Estimates</div>
+        <p>Transparent pricing with no hidden fees. You'll know the cost before we start.</p>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap">
+      <div id="contactFormArea">
+        <div class="form-title">Request a Free Quote</div>
+        <p class="form-sub">Fill out the form and we'll reach out within a few hours.</p>
+
+        <div class="form-row">
+          <div class="fg">
+            <label>Name *</label>
+            <input type="text" id="nameField" placeholder="Your full name"/>
+            <div class="form-error" id="nameError">Name is required</div>
+          </div>
+          <div class="fg">
+            <label>Phone *</label>
+            <input type="tel" id="phoneField" placeholder="(555) 000-0000"/>
+            <div class="form-error" id="phoneError">Phone number is required</div>
+          </div>
+        </div>
+        <div class="fg">
+          <label>Email *</label>
+          <input type="email" id="emailField" placeholder="you@email.com"/>
+          <div class="form-error" id="emailError">Valid email is required</div>
+        </div>
+        <div class="fg">
+          <label>Street Address *</label>
+          <input type="text" id="streetField" placeholder="123 Main St"/>
+          <div class="form-error" id="streetError">Street address is required</div>
+        </div>
+        <div class="form-row">
+          <div class="fg">
+            <label>City *</label>
+            <input type="text" id="cityField" placeholder="Ogden"/>
+            <div class="form-error" id="cityError">City is required</div>
+          </div>
+          <div class="fg">
+            <label>State *</label>
+            <input type="text" id="stateField" placeholder="UT"/>
+            <div class="form-error" id="stateError">State is required</div>
+          </div>
+        </div>
+        <div class="fg">
+          <label>Zip Code *</label>
+          <input type="text" id="zipField" placeholder="84401"/>
+          <div class="form-error" id="zipError">Zip code is required</div>
+        </div>
+        <div class="fg">
+          <label>Service Needed</label>
+          <select id="serviceField">
+            <option value="">Select a service...</option>
+            <option>In-Person Junk Removal</option>
+            <option>Trailer Drop-Off</option>
+            <option>Not sure — need a quote</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label>Message *</label>
+          <textarea id="messageField" placeholder="Tell us what you need hauled away..."></textarea>
+          <div class="form-error" id="messageError">Please describe what you need</div>
+        </div>
+        <button class="submit-btn" onclick="submitForm()">Request Free Quote →</button>
+      </div>
+
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon">✓</div>
+        <h3>Request Received</h3>
+        <p>Thanks for reaching out to Call N Haul. We'll review your request and get back to you within a few hours.</p>
+        <button class="btn btn-blue" onclick="resetForm()" style="margin-top:24px">Send Another Request</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div>
+      <div class="footer-brand">Call N <span>Haul</span></div>
+      <div class="footer-tag">One Call Clears All.</div>
+    </div>
+    <ul class="footer-links">
+      <li><a onclick="showPage('home')">Home</a></li>
+      <li><a onclick="showPage('services')">Services</a></li>
+      <li><a onclick="showPage('about')">About</a></li>
+      <li><a onclick="showPage('contact')">Contact</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 Call N Haul. All rights reserved.</div>
+  </footer>
+</div>
+
+
+<!-- ═══════════════ JAVASCRIPT ═══════════════ -->
+<script>
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  document.getElementById('page-' + name).classList.add('active');
+  const navEl = document.getElementById('nav-' + name);
+  if (navEl) navEl.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.getElementById('mobile-nav').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+}
+
+function toggleMenu() {
+  document.getElementById('mobile-nav').classList.toggle('open');
+  document.getElementById('hamburger').classList.toggle('open');
+}
+
+function submitForm() {
+  const name    = document.getElementById('nameField').value.trim();
+  const email   = document.getElementById('emailField').value.trim();
+  const phone   = document.getElementById('phoneField').value.trim();
+  const street  = document.getElementById('streetField').value.trim();
+  const city    = document.getElementById('cityField').value.trim();
+  const state   = document.getElementById('stateField').value.trim();
+  const zip     = document.getElementById('zipField').value.trim();
+  const service = document.getElementById('serviceField').value.trim();
+  const message = document.getElementById('messageField').value.trim();
+
+  let valid = true;
+  document.querySelectorAll('.form-error').forEach(e => e.classList.remove('show'));
+
+  if (!name)    { document.getElementById('nameError').classList.add('show');    valid = false; }
+  if (!email || !/\S+@\S+\.\S+/.test(email)) { document.getElementById('emailError').classList.add('show'); valid = false; }
+  if (!phone)   { document.getElementById('phoneError').classList.add('show');   valid = false; }
+  if (!street)  { document.getElementById('streetError').classList.add('show');  valid = false; }
+  if (!city)    { document.getElementById('cityError').classList.add('show');    valid = false; }
+  if (!state)   { document.getElementById('stateError').classList.add('show');   valid = false; }
+  if (!zip)     { document.getElementById('zipError').classList.add('show');     valid = false; }
+  if (!message) { document.getElementById('messageError').classList.add('show'); valid = false; }
+
+  if (valid) {
+    fetch('https://formspree.io/f/xgopboag', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, phone, street, city, state, zip, service, message })
+    })
+    .then(response => {
+      if (response.ok) {
+        document.getElementById('contactFormArea').style.display = 'none';
+        document.getElementById('formSuccess').classList.add('show');
+      } else {
+        alert('Something went wrong. Please try again or call us directly.');
+      }
+    })
+    .catch(() => {
+      alert('Something went wrong. Please try again or call us directly.');
+    });
+  }
+}
+
+function resetForm() {
+  ['nameField','emailField','phoneField','streetField','cityField','stateField','zipField','messageField'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+  document.getElementById('serviceField').selectedIndex = 0;
+  document.querySelectorAll('.form-error').forEach(e => e.classList.remove('show'));
+  document.getElementById('contactFormArea').style.display = 'block';
+  document.getElementById('formSuccess').classList.remove('show');
+}
+</script>
+
+</body>
+</html>
